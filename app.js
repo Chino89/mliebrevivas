@@ -23,4 +23,6 @@ app.get('/login', (req, res) => res.sendFile(path.join(viewsPath, 'login.html'))
 
 
 // Levantamos el servidor con app.listen(port)
-app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}!`));
+app.listen (process.env.PORT ||3000, ()=>{
+    console.log('Servidor funcionando bien');
+});
